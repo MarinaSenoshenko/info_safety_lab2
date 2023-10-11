@@ -1,0 +1,48 @@
+In cryptography, a substitution cipher is a method of encrypting in which units of plaintext are replaced with the ciphertext, in a defined manner, with the help of a key; the "units" may be single letters (the most common), pairs of letters, triplets of letters, mixtures of the above, and so forth. The receiver deciphers the text by performing the inverse substitution process to extract the original message.
+
+Substitution ciphers can be compared with transposition ciphers. In a transposition cipher, the units of the plaintext are rearranged in a different and usually quite complex order, but the units themselves are left unchanged. By contrast, in a substitution cipher, the units of the plaintext are retained in the same sequence in the ciphertext, but the units themselves are altered.
+
+There are a number of different types of substitution cipher. If the cipher operates on single letters, it is termed a simple substitution cipher; a cipher that operates on larger groups of letters is termed polygraphic. A monoalphabetic cipher uses fixed substitution over the entire message, whereas a polyalphabetic cipher uses a number of substitutions at different positions in the message, where a unit from the plaintext is mapped to one of several possibilities in the ciphertext and vice versa.
+
+The first ever published description of how to crack simple substitution ciphers was given by Al-Kindi in A Manuscript on Deciphering Cryptographic Messages written around 850 CE. The method he described is now known as frequency analysis.
+Substitution of single letters separately—simple substitution—can be demonstrated by writing out the alphabet in some order to represent the substitution. This is termed a substitution alphabet. The cipher alphabet may be shifted or reversed (creating the Caesar and Atbash ciphers, respectively) or scrambled in a more complex fashion, in which case it is called a mixed alphabet or deranged alphabet. Traditionally, mixed alphabets may be created by first writing out a keyword, removing repeated letters in it, then writing all the remaining letters in the alphabet in the usual order.
+
+Using this system, the keyword "zebras" gives us the following alphabets:
+Example: MAT would be used to represent 120.
+
+Security
+Although the traditional keyword method for creating a mixed substitution alphabet is simple, a serious disadvantage is that the last letters of the alphabet (which are mostly low frequency) tend to stay at the end. A stronger way of constructing a mixed alphabet is to generate the substitution alphabet completely randomly.
+
+Although the number of possible substitution alphabets is very large (26! ≈ 288.4, or about 88 bits), this cipher is not very strong, and is easily broken. Provided the message is of reasonable length (see below), the cryptanalyst can deduce the probable meaning of the most common symbols by analyzing the frequency distribution of the ciphertext. This allows formation of partial words, which can be tentatively filled in, progressively expanding the (partial) solution (see frequency analysis for a demonstration of this). In some cases, underlying words can also be determined from the pattern of their letters; for example, attract, osseous, and words with those two as the root are the only common English words with the pattern ABBCADB. Many people solve such ciphers for recreation, as with cryptogram puzzles in the newspaper.
+
+According to the unicity distance of English, 27.6 letters of ciphertext are required to crack a mixed alphabet simple substitution. In practice, typically about 50 letters are needed, although some messages can be broken with fewer if unusual patterns are found. In other cases, the plaintext can be contrived to have a nearly flat frequency distribution, and much longer plaintexts will then be required by the cryptanalyst.
+
+Nomenclator
+
+The forged nomenclator message used in the Babington Plot
+
+A French nomenclator code table
+One once-common variant of the substitution cipher is the nomenclator. Named after the public official who announced the titles of visiting dignitaries, this cipher uses a small code sheet containing letter, syllable and word substitution tables, sometimes homophonic, that typically converted symbols into numbers. Originally the code portion was restricted to the names of important people, hence the name of the cipher; in later years, it covered many common words and place names as well. The symbols for whole words (codewords in modern parlance) and letters (cipher in modern parlance) were not distinguished in the ciphertext. The Rossignols' Great Cipher used by Louis XIV of France was one.
+
+Nomenclators were the standard fare of diplomatic correspondence, espionage, and advanced political conspiracy from the early fifteenth century to the late eighteenth century; most conspirators were and have remained less cryptographically sophisticated. Although government intelligence cryptanalysts were systematically breaking nomenclators by the mid-sixteenth century, and superior systems had been available since 1467, the usual response to cryptanalysis was simply to make the tables larger. By the late eighteenth century, when the system was beginning to die out, some nomenclators had 50,000 symbols.[citation needed]
+
+Nevertheless, not all nomenclators were broken; today, cryptanalysis of archived ciphertexts remains a fruitful area of historical research.
+
+Homophonic
+An early attempt to increase the difficulty of frequency analysis attacks on substitution ciphers was to disguise plaintext letter frequencies by homophony. In these ciphers, plaintext letters map to more than one ciphertext symbol. Usually, the highest-frequency plaintext symbols are given more equivalents than lower frequency letters. In this way, the frequency distribution is flattened, making analysis more difficult.
+
+Since more than 26 characters will be required in the ciphertext alphabet, various solutions are employed to invent larger alphabets. Perhaps the simplest is to use a numeric substitution 'alphabet'. Another method consists of simple variations on the existing alphabet; uppercase, lowercase, upside down, etc. More artistically, though not necessarily more securely, some homophonic ciphers employed wholly invented alphabets of fanciful symbols.
+
+The book cipher is a type of homophonic cipher, one example being the Beale ciphers. This is a story of buried treasure that was described in 1819–21 by use of a ciphered text that was keyed to the Declaration of Independence. Here each ciphertext character was represented by a number. The number was determined by taking the plaintext character and finding a word in the Declaration of Independence that started with that character and using the numerical position of that word in the Declaration of Independence as the encrypted form of that letter. Since many words in the Declaration of Independence start with the same letter, the encryption of that character could be any of the numbers associated with the words in the Declaration of Independence that start with that letter. Deciphering the encrypted text character X (which is a number) is as simple as looking up the Xth word of the Declaration of Independence and using the first letter of that word as the decrypted character.
+
+Another homophonic cipher was described by Stahl[2][3] and was one of the first[citation needed] attempts to provide for computer security of data systems in computers through encryption. Stahl constructed the cipher in such a way that the number of homophones for a given character was in proportion to the frequency of the character, thus making frequency analysis much more difficult.
+
+Francesco I Gonzaga, Duke of Mantua, used the earliest known example of a homophonic substitution cipher in 1401 for correspondence with one Simone de Crema.[4][5]
+
+Mary, Queen of Scots, while imprisoned by Elizabeth I, during the years from 1578 to 1584 used homophonic ciphers with additional encryption using a nomenclator for frequent prefixes, suffixes, and proper names while communicating with her allies including Michel de Castelnau.[6]
+
+Polyalphabetic
+Main article: Polyalphabetic cipher
+The work of Al-Qalqashandi (1355-1418), based on the earlier work of Ibn al-Durayhim (1312–1359), contained the first published discussion of the substitution and transposition of ciphers, as well as the first description of a polyalphabetic cipher, in which each plaintext letter is assigned more than one substitute.[7] Polyalphabetic substitution ciphers were later described in 1467 by Leone Battista Alberti in the form of disks. Johannes Trithemius, in his book Steganographia (Ancient Greek for "hidden writing") introduced the now more standard form of a tableau (see below; ca. 1500 but not published until much later). A more sophisticated version using mixed alphabets was described in 1563 by Giovanni Battista della Porta in his book, De Furtivis Literarum Notis (Latin for "On concealed characters in writing").
+
+In a polyalphabetic cipher, multiple cipher alphabets are used. To facilitate encryption, all the alphabets are usually written out in a large table, traditionally called a tableau. The tableau is usually 26×26, so that 26 full ciphertext alphabets are available. The method of filling the tableau, and of choosing which alphabet to use next, defines the particular polyalphabetic cipher. All such ciphers are easier to break than once believed, as substitution alphabets are repeated for sufficiently large plaintexts.
