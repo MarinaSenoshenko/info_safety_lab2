@@ -18,14 +18,24 @@ void hash(const char *message, int message_length, char *hash_value) {
 }
 
 int main() {
-    char message[] = "Hello, world!";
-    char hash_value[BLOCK_SIZE];
+    char original_message[] = "Hello, world!";
+    char modified_message[] = "Hello, modified!";
 
-    hash(message, strlen(message), hash_value);
+    char original_hash_value[BLOCK_SIZE];
+    char modified_hash_value[BLOCK_SIZE];
 
-    printf("Hash value: ");
+    hash(original_message, strlen(original_message), original_hash_value);
+    hash(modified_message, strlen(modified_message), modified_hash_value);
+
+    printf("Original Hash value: ");
     for (int i = 0; i < BLOCK_SIZE; i++) {
-        printf("%02x", (unsigned char)hash_value[i]);
+        printf("%02x", (unsigned char)original_hash_value[i]);
+    }
+    printf("\n");
+
+    printf("Modified Hash value: ");
+    for (int i = 0; i < BLOCK_SIZE; i++) {
+        printf("%02x", (unsigned char)modified_hash_value[i]);
     }
     printf("\n");
 

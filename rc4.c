@@ -30,7 +30,6 @@ void rc4(char *plain_text, int text_length, char *key, int key_length, char *cip
     init(key, key_length, s_block);
 
     for (i = 0; i < text_length; i++) {
-        // Pseudo-Random Generation Algorithm
         x = (x + 1) % LEN;
         s_block_x = s_block[x];
 
@@ -39,7 +38,6 @@ void rc4(char *plain_text, int text_length, char *key, int key_length, char *cip
 
         swap((unsigned char*)&s_block_x, (unsigned char*)&s_block_y);
 
-        // make xor
         cipher_text[i] = plain_text[i] ^ s_block[(s_block_x + s_block_y) % LEN];
     }
 }
